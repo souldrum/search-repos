@@ -1,0 +1,74 @@
+.header
+    display: flex
+    align-items: center
+    padding: 1.2rem 2rem
+    background: $HeaderColor
+    @media (max-width: 500px)
+        flex-direction: column
+        align-items: center
+    &__link
+        color: #fff
+        @media (max-width: 500px)
+            margin-bottom: 1rem
+        &:hover
+            cursor: pointer
+            color: #ffffffa6
+
+            transition: color .2s
+    &__logo
+        font-size: 2.5rem
+    &__form
+        display: flex
+        flex-wrap: wrap
+        @media (max-width: 425px)
+            flex-direction: column
+    &__search
+        margin-left: 1.5rem
+        padding: .3rem .7rem
+        border: .1rem solid $BorderSearch
+        border-radius: .3rem
+        @media (max-width: 500px)
+            margin-left: 0
+        &_red
+            border: .1rem solid #f00
+        &:hover
+            cursor: pointer
+    &__search-icon
+        color: $BorderSearch
+        &:hover
+            color: #f0f0f0
+
+            transition: color .2s
+        @media (max-width: 345px)
+            display: none
+    &__search-btn
+        margin-left: 1rem
+        padding: 0 1rem
+
+        color: $BorderSearch
+        font: 400 normal 1rem/1.5 $NotoStack
+
+        border: none
+        border-radius: .3rem
+        @media (max-width: 500px)
+            padding: 0 .5rem
+        @media (max-width: 425px)
+            margin: .5rem 0
+            padding: 0.5rem
+        &:hover
+            cursor: pointer
+
+            background: #fff
+            transition: background .2s
+        &:active
+            background: #e7e7e7
+    &__input
+        width: 16rem
+
+        border: none
+        background: $HeaderColor
+        color: #fff
+        font: 400 normal 1rem/1.5 $NotoStack
+
+        &:focus
+            outline: none

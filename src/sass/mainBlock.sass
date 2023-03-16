@@ -1,0 +1,108 @@
+.container
+    min-height: 100vh
+
+    background: #fff
+
+.repos
+    &__title
+        padding: 1rem 0 .3rem
+
+        color: $MainText
+        font: 500 normal 1.5rem $NotoStack
+
+        border-bottom: .1rem solid $lines
+        @media (max-width: 500px)
+            text-align: center
+    &__message-list-empty
+        +HelpTextStack
+        &_hidden
+            display: none
+    &__message-list-loading
+        +HelpTextStack
+        &_hidden
+            display: none
+    &__message-not-found
+        +HelpTextStack
+        &_hidden
+            display: none
+    &__message-error
+        display: flex
+        justify-content: center
+        align-items: baseline
+        padding: 2rem 0
+        &_hidden
+            display: none
+        @media (max-width: 450px)
+            flex-direction: column
+            align-items: center
+    &__error-icon
+        padding: 0 .5rem
+
+        color: #f00
+        font-size: 2rem
+    &__error-text
+        color: #f00
+        font: 700 normal 1rem $NotoStack
+        @media (max-width: 450px)
+            text-align: center
+
+    &__list
+        padding: 0
+    &__list-item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 1rem
+        padding: 1rem
+
+        border: .1rem solid $lines
+        border-radius: .3rem
+
+        box-shadow: 0 0 .3rem $lines
+        &:hover
+            cursor: pointer
+            background: #f0f0f05e
+
+            transform: translateY(-.15rem)
+
+            transition: background, transform .2s
+        @media (max-width: 768px)
+            flex-wrap: wrap
+            flex-direction: column
+            align-items: flex-start
+            margin-top: .5rem
+        @media (max-width: 425px)
+            flex-direction: column
+            align-items: center
+
+    &__link
+        color: $BlueText
+
+        font: 700 normal 1.2rem $NotoStack
+        @media (max-width: 768px)
+            margin-bottom: .5rem
+        @media (max-width: 768px)
+            word-break: break-word
+    &__author-wrapper
+        display: flex
+        align-items: center
+        @media (max-width: 425px)
+            flex-direction: column
+    &__author
+        padding: 0 .5rem
+        color: $MainText
+        font: 500 normal 1.2rem $NotoStack
+        @media (max-width: 768px)
+            padding: 0 .5rem 0 0
+
+    &__author-link
+        color: $BlueText
+
+        font: 400 normal 1.2rem $NotoStack
+    &__author-avatar
+        height: 3rem
+        margin-left: 1rem
+
+        border-radius: 50%
+        @media (max-width: 425px)
+            margin: 1rem 0 0
