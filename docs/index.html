@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <script
+            src="https://kit.fontawesome.com/e661d6abfa.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Github поиск</title>
+        <script
+            type="module"
+            crossorigin
+            src="assets/index-c3376eb1.js"
+        ></script>
+        <link rel="stylesheet" href="assets/index-13d8a204.css" />
+        <script type="module">
+            import.meta.url;
+            import("_").catch(() => 1);
+            async function* g() {}
+            window.__vite_is_modern_browser = true;
+        </script>
+        <script type="module">
+            !(function () {
+                if (window.__vite_is_modern_browser) return;
+                console.warn(
+                    "vite: loading legacy chunks, syntax error above and the same error below should be ignored"
+                );
+                var e = document.getElementById("vite-legacy-polyfill"),
+                    n = document.createElement("script");
+                (n.src = e.src),
+                    (n.onload = function () {
+                        System.import(
+                            document
+                                .getElementById("vite-legacy-entry")
+                                .getAttribute("data-src")
+                        );
+                    }),
+                    document.body.appendChild(n);
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="app">
+            <header class="header">
+                <a
+                    class="header__link"
+                    href="https://github.com/souldrum"
+                    target="_blank"
+                    title="Страница автора поисковика на Github"
+                >
+                    <i class="header__logo fa-brands fa-github"></i>
+                </a>
+                <form
+                    class="header__form"
+                    name="search"
+                    title="Поиск Github репозитория"
+                >
+                    <label for="search-input" class="header__search">
+                        <i
+                            class="header__search-icon fa-solid fa-magnifying-glass"
+                        ></i>
+                        <input
+                            id="search-input"
+                            class="header__input"
+                            type="text"
+                            placeholder="Введите название репозитория"
+                            name="search-input"
+                        />
+                    </label>
+                    <button
+                        class="header__search-btn"
+                        type="submit"
+                        title="Найти"
+                    >
+                        Найти
+                    </button>
+                </form>
+            </header>
+            <!--/.header-->
+            <main class="repos">
+                <div class="container">
+                    <h1 class="repos__title">Список найденных репозиториев</h1>
+                    <section class="repos__info">
+                        <h3 class="repos__message-list-empty">
+                            Список пока пуст
+                        </h3>
+                        <h3
+                            class="repos__message-list-loading repos__message-list-loading_hidden"
+                        >
+                            Идёт загрузка...
+                        </h3>
+                        <h3
+                            class="repos__message-not-found repos__message-not-found_hidden"
+                        >
+                            Ничего не найдено
+                        </h3>
+                        <div
+                            class="repos__message-error repos__message-error_hidden"
+                        >
+                            <i
+                                class="repos__error-icon fa-solid fa-triangle-exclamation"
+                            ></i>
+                            <h3 class="repos__error-text">Ошибка</h3>
+                        </div>
+                    </section>
+                    <ul class="repos__list">
+                        <!--li from js-->
+                    </ul>
+                </div>
+            </main>
+            <!--/.repos-->
+        </div>
+
+        <script nomodule>
+            !(function () {
+                var e = document,
+                    t = e.createElement("script");
+                if (!("noModule" in t) && "onbeforeload" in t) {
+                    var n = !1;
+                    e.addEventListener(
+                        "beforeload",
+                        function (e) {
+                            if (e.target === t) n = !0;
+                            else if (!e.target.hasAttribute("nomodule") || !n)
+                                return;
+                            e.preventDefault();
+                        },
+                        !0
+                    ),
+                        (t.type = "module"),
+                        (t.src = "."),
+                        e.head.appendChild(t),
+                        t.remove();
+                }
+            })();
+        </script>
+        <script
+            nomodule
+            crossorigin
+            id="vite-legacy-polyfill"
+            src="assets/polyfills-legacy-c118bd03.js"
+        ></script>
+        <script
+            nomodule
+            crossorigin
+            id="vite-legacy-entry"
+            data-src="assets/index-legacy-01a1fcb2.js"
+        >
+            System.import(
+                document
+                    .getElementById("vite-legacy-entry")
+                    .getAttribute("data-src")
+            );
+        </script>
+    </body>
+</html>
