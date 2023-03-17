@@ -28,7 +28,7 @@
 
 ![not found](/public/images/readme/readme_not-found.jpg)
 
-5. Кстати, добавлена адаптивность, с **мобильных устройств** поисковик будет выглядеть примерно так:
+6. Кстати, добавлена адаптивность, с **мобильных устройств** поисковик будет выглядеть примерно так:
 
 ![app mobile version](/public/images/readme/readme_mobile-version.jpg)
 
