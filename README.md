@@ -1,29 +1,31 @@
-# Metar And Weather
+# Github поиск (поиск репозиториев).
 
-Hello, I'm [Souldrum](https://github.com/souldrum) and this is my little [Metar And Weather](https://souldrum.github.io/Metar_And_Weather/) app. **METAR** is an aviation meteorological code for transmitting actual weather reports at an aerodrome, which you can get if you enter the ICAO code of your airport in the appropriate field. This application is not a product for mass use, but you can try how it works. This is my draft for practicing getting data from an external API (thanks to [CheckWX API](https://www.checkwxapi.com/) for providing the data). In addition to getting the METAR data, in the field below I have decoded some of the data, which allows you to use this application as a small weather resource. I think that fans of flight simulators and other people close to aviation will be able to figure out the interface without a manual, but if you are not familiar with such words as **METAR** and **ICAO**, then I will tell you what to do with it.
+Привет! Я [souldrum](https://github.com/souldrum) и это мой [поисковик репозиториев на Github](https://souldrum.github.io/search-repos/). Данный поисковик не продукт массового использования (хотя функционал действительно жизнеспособный), а моё практическое задание. Написан на нативном JS. Ну и, конечно, спасибо **Github API** за возможность получать данные. В принципе нет необходимости писать мануал для поисковиков (у меня даже дети умеют ими пользоваться), но, поскольку это (повторюсь) моё практическое задание — несколько пунктов с картинками приложу:
 
--   Enter the ICAO code of your airport in the field
+1. Вначале мы видим **такую картину**.
 
-![icao](src/readme_img/inputIcao.jpg)
+![default app](/public/images/readme/readme_default-app.jpg)
 
--   If you do not know what an icao code is and what the icao code of the airport you need is, then hover over the icon to the right of the input field and follow the link in the tooltip.
+Казалось бы всё понятно, вводи что хочешь и получишь результат, однако, если ничего не ввести и отправить запрос (клавиша Enter, или кнопка "Найти"), то получим следующее:
 
-![icao-database](src/readme_img/tooltip.jpg)
+![error input](/public/images/readme/readme_error-input.jpg)
 
--   On the [page](https://airportsbase.org/ICAO.php) that opens, find the country you need.
+Поле ввода подсвечено красным и выскакивает ошибка. Вообще в подобном случае **Github** и сам выдаёт ошибку 422, однако после того, как пустая форма отправлена. В моём же случае запрос попросту НЕ отправляется, если данных недостаточно!
 
-![select country](src/readme_img/icaoPage.jpg)
+2. Как только начинаете что-нибудь вводить — все элементы ("чужеродного") красного цвета исчезают.
 
--   Then the city in which the airport you need is located.
+![active input](/public/images/readme/readme_active-input.jpg)
 
-![select city](src/readme_img/icaoPageCity.jpg)
+3. После того, как ввели искомый репозиторий (это не реклама Vite JS, хотя мне он действительно нравится) нажимаем Enter, или "Найти", загрузка пошла, значит запрос отправлен.
 
--   After that, you will see all possible airports in the selected city and a table with the column we need.
+![loading](/public/images/readme/readme_loading.jpg)
 
-![get icao](src/readme_img/LFPG.jpg)
+4. Ответ пришел (форма очистилась, загрузчик исчез) — поздравляю! Получаем список подходящих под содержимое запроса репозиториев. По умолчанию **Github API** присылает 30 элементов на страницу, но в моём задание было сказано ограничиться десятью, поэтому на Вашей странице будет 10 репозиториев. Каждая "карточка" представляет из себя имя репозитория, её автора и аватар автора.
 
--   For example, we are interested in the weather around Charles de Gaulle Airport in Paris. We enter its code in the input field, press the ENTER key and we get the METAR summary (top field) and the decoding of some METAR summary data (field below).
+![result](/public/images/readme/readme_result.jpg)
 
-![enter icao](src/readme_img/data.jpg)
+5. Если Вы ввели что-то настолько экзотическое, чего нет ни в одном имени ни в одном репозитории на Github, то в ответ увидите **соответствующую надпись**
 
-### I hope this guide was helpful! I wish you all great weather!
+![not found](/public/images/readme/readme_not-found.jpg)
+
+### Вот в общем-то и всё! Надеюсь, что этот [поисковик](https://souldrum.github.io/search-repos/) будет не только моей практической задачей по написанию на нативном JS и работе с запросами, но и кому-то действительно пригодится! Удачного поиска!
